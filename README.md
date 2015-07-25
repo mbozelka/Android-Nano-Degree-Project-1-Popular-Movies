@@ -1,4 +1,4 @@
-# gulp-dev-boilerplate
+# Android Nanodegree Porject 1 - Popular Movies App Stage 1
 
 Project number one for the Udacity Android Nanodegree. The app pulls in data about popluar movies from https://www.themoviedb.org/.
 
