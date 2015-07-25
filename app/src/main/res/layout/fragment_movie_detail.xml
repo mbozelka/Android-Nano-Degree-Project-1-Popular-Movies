@@ -1,0 +1,85 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.mattbozelka.popularmovies.MovieDetailFragment">
+
+    <!-- movie title -->
+    <TextView
+        android:id="@+id/movie_title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/detailHeader"
+        />
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <!-- poster/rating/and date -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:id="@+id/poster_image_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    style="@style/detailPoster"
+                    />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+                    <TextView
+                        android:id="@+id/release_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/detailYear"
+                        />
+
+                    <TextView
+                        android:id="@+id/ratings_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/detailRating"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- synopsis -->
+            <TextView
+                android:id="@+id/synopsis_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/detailSynopsis"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

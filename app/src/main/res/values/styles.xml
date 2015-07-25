@@ -1,0 +1,62 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primaryDark</item>
+        <item name="android:textColorPrimary">@color/primaryText</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <!-- Detail page theme. -->
+    <style name="DetailTheme" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/ActionBar.DetailTheme</item>
+    </style>
+
+    <!-- Detail page theme action bar. -->
+    <style name="ActionBar.DetailTheme" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+    </style>
+
+    <!-- settings theme -->
+    <style name="SettingsTheme" parent="AppTheme">
+    </style>
+
+    <!-- detail headline -->
+    <style name="detailHeader" parent="AppTheme">
+        <item name="android:textColor">@color/lightText</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">25dp</item>
+        <item name="android:paddingBottom">25dp</item>
+        <item name="android:background">@color/primary</item>
+    </style>
+
+    <!-- detail poster -->
+    <style name="detailPoster" parent="AppTheme">
+        <item name="android:paddingRight">16dp</item>
+    </style>
+
+    <!-- detail year -->
+    <style name="detailYear" parent="AppTheme">
+        <item name="android:textColor">@color/primaryDark</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- detail year -->
+    <style name="detailRating" parent="AppTheme">
+        <item name="android:textColor">@color/accent</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- detail synopsis -->
+    <style name="detailSynopsis" parent="AppTheme">
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+    </style>
+
+</resources>

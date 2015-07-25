@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/Captain/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="false"
+        revision="23.0.0 rc2"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/Users/Captain/AndroidStudioProjects/PopularMovies/app/build/intermediates/pre-dexed/debug/picasso-2.5.2-60bbd8deb5a21d6a67e172a7be1d75409e0591fd.jar" />
+    </item>
+    <item
+        jar="/Users/Captain/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.0/support-annotations-22.2.0.jar"
+        jumboMode="false"
+        revision="23.0.0 rc2"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="/Users/Captain/AndroidStudioProjects/PopularMovies/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.0-7bbf70d63cd7fd78c2e6f5721da9a11f07b313a2.jar" />
+    </item>
+    <item
+        jar="/Users/Captain/AndroidStudioProjects/PopularMovies/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0 rc2"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="/Users/Captain/AndroidStudioProjects/PopularMovies/app/build/intermediates/pre-dexed/debug/classes-82c04156c1a3008a97dc6ab5de067269c5369114.jar" />
+    </item>
+    <item
+        jar="/Users/Captain/AndroidStudioProjects/PopularMovies/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0 rc2"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="/Users/Captain/AndroidStudioProjects/PopularMovies/app/build/intermediates/pre-dexed/debug/classes-b54201f7f5f14e853d9800b754fcd8db39a32303.jar" />
+    </item>
+    <item
+        jar="/Users/Captain/AndroidStudioProjects/PopularMovies/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="23.0.0 rc2"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="/Users/Captain/AndroidStudioProjects/PopularMovies/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-b9397048fe88552160df8b29de6c34fdc0310909.jar" />
+    </item>
+
+</items>

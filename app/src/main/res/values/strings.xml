@@ -1,0 +1,39 @@
+<resources>
+
+    <!--
+    *********************
+    * Activity name
+    *********************
+    -->
+    <string name="app_name">Popular Movies</string>
+    <string name="activity_settings">Settings</string>
+    <string name="activity_details">Movie Details</string>
+
+    <!--
+    *********************
+    * Menu item names
+    *********************
+    -->
+    <string name="action_settings">Settings</string>
+
+    <!--
+    *********************
+    * preference settings
+    *********************
+    -->
+
+    <!-- categories -->
+    <string name="category_display_preferences">Display Preferences</string>
+
+    <!-- List Preference on Sort Order -->
+    <string name="display_preferences_sort_order_title">Sort Order</string>
+    <string name="display_preferences_sort_order_desc">Select sort order for the movies</string>
+    <string name="display_preferences_sort_order_key">sortType</string>
+    <string name="display_preferences_sort_default_value">popularity.desc</string>
+    <string name="sort_array_item_1">Most Popular</string>
+    <string name="sort_array_item_2">Highest-rated</string>
+    <string name="sort_array_item_1_value">popularity.desc</string>
+    <string name="sort_array_item_2_value">vote_average.desc</string>
+    <string name="title_activity_movie_detail">MovieDetailActivity</string>
+
+</resources>

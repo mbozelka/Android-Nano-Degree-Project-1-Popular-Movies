@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="sortArray">
+        <item>@string/sort_array_item_1</item>
+        <item>@string/sort_array_item_2</item>
+    </string-array>
+    <string-array name="sortArrayValues">
+        <item>@string/sort_array_item_1_value</item>
+        <item>@string/sort_array_item_2_value</item>
+    </string-array>
+
+</resources>
