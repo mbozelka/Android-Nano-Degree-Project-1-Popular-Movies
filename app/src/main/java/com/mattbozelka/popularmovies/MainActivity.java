@@ -18,15 +18,21 @@ public class MainActivity extends ActionBarActivity {
 
     private final String LOG_TAG = MainActivity.class.getSimpleName();
     private FragmentManager fragmentManager = getFragmentManager();
+    MovieListFragment fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         if (savedInstanceState == null) {
+            fragment = new MovieListFragment();
             fragmentManager.beginTransaction()
-                    .add(R.id.container, new MovieListFragment())
+                    .add(R.id.container, fragment)
                     .commit();
+        }else{
+            fragment = (MovieListFragment) fragmentManager.getFragment(
+                    savedInstanceState, "fragmentContent");
         }
     }
 
@@ -46,6 +52,12 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        fragmentManager.putFragment(savedInstanceState, "fragmentContent", fragment);
     }
 
 }

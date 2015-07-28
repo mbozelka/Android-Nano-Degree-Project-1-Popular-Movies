@@ -24,7 +24,10 @@ import java.util.List;
 public class MovieListFragment extends Fragment{
 
     private final String LOG_TAG = MovieListFragment.class.getSimpleName();
+    private final String STORED_MOVIES = "stored_movies";
+    private SharedPreferences prefs;
     private ImageAdapter mMoviePosterAdapter;
+    String sortOrder;
     List<Movie> movies = new ArrayList<Movie>();
 
     public MovieListFragment() {
@@ -35,6 +38,16 @@ public class MovieListFragment extends Fragment{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
+        prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        sortOrder = prefs.getString(getString(R.string.display_preferences_sort_order_key),
+                getString(R.string.display_preferences_sort_default_value));
+
+        if(savedInstanceState != null){
+            ArrayList<Movie> storedMovies = new ArrayList<Movie>();
+            storedMovies = savedInstanceState.<Movie>getParcelableArrayList(STORED_MOVIES);
+            movies.clear();
+            movies.addAll(storedMovies);
+        }
     }
 
     @Override
@@ -75,14 +88,28 @@ public class MovieListFragment extends Fragment{
     @Override
     public void onStart() {
         super.onStart();
-        getMovies();
+
+        // get sort order to see if it has recently changed
+        String prefSortOrder = prefs.getString(getString(R.string.display_preferences_sort_order_key),
+                getString(R.string.display_preferences_sort_default_value));
+
+        if(movies.size() > 0 && prefSortOrder.equals(sortOrder)) {
+            updatePosterAdapter();
+        }else{
+            sortOrder = prefSortOrder;
+            getMovies();
+        }
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        ArrayList<Movie> storedMovies = new ArrayList<Movie>();
+        storedMovies.addAll(movies);
+        outState.putParcelableArrayList(STORED_MOVIES, storedMovies);
     }
 
     private void getMovies() {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
-        String sortOrder = prefs.getString(getString(R.string.display_preferences_sort_order_key),
-                getString(R.string.display_preferences_sort_default_value));
-
         FetchMoviesTask fetchMoviesTask = new FetchMoviesTask(new AsyncResponse() {
             @Override
             public void onTaskCompleted(List<Movie> results) {
@@ -95,7 +122,7 @@ public class MovieListFragment extends Fragment{
     }
 
     // updates the ArrayAdapter of poster images
-    private void updatePosterAdapter(){
+    private void updatePosterAdapter() {
         mMoviePosterAdapter.clear();
         for(Movie movie : movies) {
             mMoviePosterAdapter.add(movie.getPoster());
